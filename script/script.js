@@ -1,25 +1,43 @@
 'use strict';
 
-const box = document.getElementById('box');
-console.log(box);
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.querySelectorAll('.heart'),
+      oneHeart = document.querySelector('.heart'),
+      wrapper = document.querySelector('.wrapper');
 
-const btns = document.getElementsByTagName('button');
-console.log(btns);
+console.dir(btns);
 
-const circle = document.getElementsByClassName('circle');
-console.log(circle);
+/*
+box.style.backgroundColor = 'blue';
+box.style.width = '500px';
+box.style.color = 'white';
 
-const circle1 = document.querySelectorAll('.circle');
-console.log(circle1);
+btns[1].style.borderRadius = '100%';
 
-circle1.forEach((item, i) => {
-    console.log(i + 1,': ', item);
-});
+//circles[1].style.backgroundColor = 'red';
 
-const oneCircle = document.querySelector('.circle');
-console.log(oneCircle);
+/!*
+for (let i = 0; i < circles.length; i++) {
+    circles[i].style.backgroundColor = 'red';
+}*!/
 
-const oneButton = document.querySelector('button');
-console.log(oneButton);
+hearts.forEach(item => {
+    item.style.width = '10%';
+})*/
 
+const div = document.createElement('div');
+//const text = document.createTextNode('Тут був я!');
+div.classList.add('black');
 
+//document.querySelector('.wrapper').append(div);
+
+//document.body.append(div);
+
+//wrapper.append(div);
+
+//wrapper.prepend(div);
+
+//hearts[0].before(div);
+hearts[0].after(div);
